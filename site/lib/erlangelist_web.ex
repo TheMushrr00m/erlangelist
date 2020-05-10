@@ -1,6 +1,6 @@
 defmodule ErlangelistWeb do
   def start_link do
-    Erlangelist.Backup.resync(ErlangelistWeb.Blog.SSL.certbot_folder())
+    Erlangelist.Backup.resync(ErlangelistWeb.Blog.Endpoint.certbot_folder())
 
     Supervisor.start_link(
       [ErlangelistWeb.Blog, ErlangelistWeb.Dashboard],
